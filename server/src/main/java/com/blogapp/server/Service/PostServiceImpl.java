@@ -5,8 +5,6 @@ import com.blogapp.server.DTO.PostResponse;
 import com.blogapp.server.Entity.Post;
 import com.blogapp.server.Repository.PostRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +14,6 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/posts")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
 public class PostServiceImpl implements PostService {
     private final PostRepository postRepository;
 
