@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { Post, PostRequest } from '../types';
 
-const API_BASE = 'http://localhost:8080/api/posts';
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8080/api/posts';
 
 export const getPosts = async (): Promise<Post[]> => {
   const response = await axios.get<Post[]>(API_BASE);
